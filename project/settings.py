@@ -38,8 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     ## apps criado
-    'usuario',
-    'app_project',
+    'usuario'
     # novo app aqui
 ]
 
