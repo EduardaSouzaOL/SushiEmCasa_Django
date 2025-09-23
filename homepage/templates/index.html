@@ -1,11 +1,90 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sushi em Casa - O melhor da culinária japonesa</title>
+    
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    
+
+    <header class="barra-navegacao">
+        <div class="logo">
+            <img src="https://placehold.co/100x50/f1f1f1/333?text=Sushi+em+Casa" alt="Logo Sushi em Casa">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="ativo">Home</a></li>
+                <li><a href="#">Basket</a></li>
+                <li><a href="#">Orders</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="icone-usuario">
+            <a href="#">
+                <i class="fas fa-user-circle"></i>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="secao-promocoes">
+            <h2>Promoções</h2>
+            <div class="carrossel-promocoes">
+                <button class="seta seta-esquerda"><i class="fas fa-chevron-left"></i></button>
+                <div class="cartao-promocao">
+                    <div class="imagem-promocao">
+                        <img src="https://placehold.co/300x200/e0e0e0/555?text=Promoção+do+Dia" alt="Promoção de Sushi">
+                    </div>
+                    <div class="descricao-promocao">
+                        <h3>Combinado Especial</h3>
+                        <p>20 peças variadas pelo preço de 15! Inclui sashimis, niguiris e uramakis selecionados pelo nosso chef.</p>
+                        <p><strong>R$ 49,90</strong></p>
+                    </div>
+                </div>
+                <button class="seta seta-direita"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <hr class="separador">
+
+        <section class="secao-menu">
+            <div class="cabecalho-menu">
+                <h2>Menu</h2>
+                <a href="#">Ver tudo <i class="fas fa-chevron-right"></i></a>
+            </div>
+            <div class="filtros-menu">
+                <button class="botao-filtro">Quentes</button>
+                <button class="botao-filtro">Tostados</button>
+                <button class="botao-filtro">Frescos</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="logo">
+            <img src="https://placehold.co/120x60/333/f1f1f1?text=Sushi+em+Casa" alt="Logo Sushi em Casa">
+        </div>
+        <div class="links-rodape">
+            <h4>Navegação</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Pedidos</a></li>
+            </ul>
+        </div>
+        <div class="contato-rodape">
+            <h4>Contato</h4>
+            <p>Rua dos Sabores, 123</p>
+            <p>contato@sushiemcasa.com</p>
+            <p>(81) 99999-8888</p>
+        </div>
+    </footer>
+
 </body>
 </html>
