@@ -1,4 +1,4 @@
 from django.shortcuts import render
 
-def orders(request):
+def pagina_orders(request):
     return render(request, 'orders.html')
