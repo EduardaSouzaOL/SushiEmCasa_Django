@@ -33,22 +33,52 @@
 
     <main>
         <section class="secao-promocoes">
-            <h2>Promoções</h2>
-            <div class="carrossel-promocoes">
-                <button class="seta seta-esquerda"><i class="fas fa-chevron-left"></i></button>
+    <h2>Promoções</h2>
+    <div class="carrossel-container">
+        <button class="seta seta-esquerda"><i class="fas fa-chevron-left"></i></button>
+
+        <div class="carrossel-viewport">
+            <div class="carrossel-track">
+
                 <div class="cartao-promocao">
                     <div class="imagem-promocao">
-                        <img src="https://placehold.co/300x200/e0e0e0/555?text=Promoção+do+Dia" alt="Promoção de Sushi">
+                        <img src="https://placehold.co/300x200/e0e0e0/555?text=Promoção+1" alt="Promoção Combinado Especial">
                     </div>
                     <div class="descricao-promocao">
                         <h3>Combinado Especial</h3>
-                        <p>20 peças variadas pelo preço de 15! Inclui sashimis, niguiris e uramakis selecionados pelo nosso chef.</p>
+                        <p>20 peças variadas. Inclui sashimis, niguiris e uramakis.</p>
                         <p><strong>R$ 49,90</strong></p>
                     </div>
                 </div>
-                <button class="seta seta-direita"><i class="fas fa-chevron-right"></i></button>
+
+                <div class="cartao-promocao">
+                    <div class="imagem-promocao">
+                        <img src="https://placehold.co/300x200/d99b9b/444?text=Promoção+2" alt="Promoção Combinado Salmão">
+                    </div>
+                    <div class="descricao-promocao">
+                        <h3>Combinado Salmão</h3>
+                        <p>15 peças só de salmão, incluindo sashimis, california rolls e joys.</p>
+                        <p><strong>R$ 59,90</strong></p>
+                    </div>
+                </div>
+
+                <div class="cartao-promocao">
+                    <div class="imagem-promocao">
+                        <img src="https://placehold.co/300x200/a3d99b/444?text=Promoção+3" alt="Promoção Festival Vegano">
+                    </div>
+                    <div class="descricao-promocao">
+                        <h3>Temaki hot</h3>
+                        <p>Temaki de salmão frito, cream cheese, arroz e alga.</p>
+                        <p><strong>R$ 45,00</strong></p>
+                    </div>
+                </div>
+
             </div>
-        </section>
+        </div>
+
+        <button class="seta seta-direita"><i class="fas fa-chevron-right"></i></button>
+    </div>
+</section>
 
         <hr class="separador">
 
@@ -58,8 +88,8 @@
                 <a href="#">Ver tudo <i class="fas fa-chevron-right"></i></a>
             </div>
             <div class="filtros-menu">
-                <button class="botao-filtro">Quentes</button>
-                <button class="botao-filtro">Tostados</button>
+                <button class="botao-filtro">Salmão</button>
+                <button class="botao-filtro">Hots</button>
                 <button class="botao-filtro">Frescos</button>
             </div>
         </section>
@@ -85,6 +115,6 @@
             <p>(81) 99999-8888</p>
         </div>
     </footer>
-
+        <script src="{% static 'js/carrossel.js' %}"></script>
 </body>
 </html>

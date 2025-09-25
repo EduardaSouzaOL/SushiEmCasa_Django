@@ -170,3 +170,48 @@ main {
     color: #ccc;
     line-height: 1.8;
 }
+
+.carrossel-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px; 
+    margin: 0 auto; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carrossel-viewport {
+    overflow: hidden; 
+    width: 100%;
+}
+
+.carrossel-track {
+    display: flex; 
+    transition: transform 0.5s ease-in-out; 
+}
+
+.cartao-promocao {
+    min-width: 100%; 
+    box-sizing: border-box;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+/* Ajuste nas setas */
+.seta {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #333;
+    padding: 0 1rem;
+}
+
+.seta:hover {
+    color: #000;
+}

@@ -33,7 +33,7 @@ Python:Select Interpreter
 Selecione a opção:
 Python 3.13.3 ('venv') (ou a versão que esteja usando, portanto que possua o ('venv'))
 
-Após isso, não será necessário ativar manualmente toda vez tiver que abrir o terminal, pois ele já vai ativar automaticamente :)
+Após isso, não será necessário ativar manualmente toda vez tiver que abrir o terminal, pois ele já vai ativar automaticamente :
 
 # Dica
 Abrir terminal do VSCODE: Ctrl + ' ou Ctrl + J
