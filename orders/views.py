@@ -1,4 +1,11 @@
 from django.shortcuts import render
+from .models import Order
 
 def pagina_orders(request):
-    return render(request, 'orders.html')
+    todos_os_pedidos = Order.objects.all().order_by('-created_at')
+
+    context = {
+        'pedidos': todos_os_pedidos
+    }
+
+    return render(request, 'orders.html', context)
