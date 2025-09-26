@@ -129,6 +129,8 @@ color: #fff;
 }
 
 .status-pendente { background-color: #f0ad4e; }
+.status-em-preparo { background-color: #337ab7; }
+.status-a-caminho { background-color: #5bc0de; }
 .status-entregue { background-color: #5cb85c; }
 .status-cancelado { background-color: #d9534f; }
 
@@ -192,17 +194,29 @@ color: #fff;
 }
 
 .stepper-item.completed .step-counter {
-  background-color: #4bb543; /* Verde para concluído */
+  background-color: #007bff;
 }
 
 .stepper-item.completed::after {
   position: absolute;
   content: "";
-  border-bottom: 2px solid #4bb543;
+  border-bottom: 2px solid #007bff;
   width: 100%;
   top: 20px;
   left: 50%;
   z-index: 3;
+}
+
+.stepper-item.active {
+    font-weight: bold;
+}
+
+.stepper-item.completed.entregue .step-counter {
+    background-color: #007bff;
+}
+
+.stepper-item.completed.entregue::after {
+    border-bottom-color: #007bff;
 }
 
 .stepper-item:first-child::before {
