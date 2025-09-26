@@ -90,3 +90,50 @@ main {
     margin: 0.2rem 0;
 }
 
+/* Estilos adicionais para a página de pedidos */
+
+.container-pedidos {
+    padding: 2rem 5%;
+    background-color: #f9f9f9;
+}
+
+.pedido {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.pedido-header {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pedido-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.pedido-status {
+font-weight: bold;
+padding: 0.5rem 1rem;
+border-radius: 20px;
+color: #fff;
+}
+
+.status-pendente { background-color: #f0ad4e; }
+.status-entregue { background-color: #5cb85c; }
+.status-cancelado { background-color: #d9534f; }
+
+.item-pedido {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+}
