@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sushi em Casa - O melhor da culinária japonesa</title>
-    <link rel="stylesheet" href="{% static 'usuario/css/style.css'%}">
+    <title>Sushi em Casa - Meus Pedidos</title>
+    <link rel="stylesheet" href="{% static 'usuario/css/style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
@@ -16,9 +16,9 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#" class="ativo">Home</a></li>
+                <li><a href="{% url 'home' %}">Home</a></li>
                 <li><a href="#">Cesta</a></li>
-                <li><a href="#">Pedidos</a></li>
+                <li><a href="#" class="ativo">Pedidos</a></li>
                 <li><a href="#">Contato</a></li>
             </ul>
         </nav>
@@ -29,15 +29,15 @@
         </div>
     </header>
 
-    <main>
-        <h1>Histórico de Pedidos</h1>
+    <main class="container-pedidos">
+        <h1>Meus Pedidos</h1>
 
         {% if pedidos %}
             {% for pedido in pedidos %}
                 <div class="pedido">
                     <div class="pedido-header">
                         <h2>Pedido #{{ pedido.id }}</h2>
-                        <span class="pedido-status status-{{ pedido.status|lower }}">{{ pedido.status }}</span>
+                        <span class="pedido-status status-{{ pedido.status|slugify }}">{{ pedido.status }}</span>
                     </div>
                     <p><strong>Cliente:</strong> {{ pedido.user.username }}</p>
                     <p><strong>Data:</strong> {{ pedido.created_at|date:"d/m/Y H:i" }}</p>
@@ -51,6 +51,25 @@
                     {% endfor %}
                     <hr>
                     <p><strong>Total: R$ {{ pedido.total_price }}</strong></p>
+
+                    <div class="stepper-wrapper">
+                        <div class="stepper-item {% if pedido.status == 'Pendente' or pedido.status == 'Em preparo' or pedido.status == 'A caminho' or pedido.status == 'Entregue' %}completed{% endif %}">
+                            <div class="step-counter"><i class="fas fa-check"></i></div>
+                            <div class="step-name">Pedido Aceito</div>
+                        </div>
+                        <div class="stepper-item {% if pedido.status == 'Em preparo' or pedido.status == 'A caminho' or pedido.status == 'Entregue' %}completed{% endif %}">
+                            <div class="step-counter"><i class="fas fa-money-bill-wave"></i></div>
+                            <div class="step-name">Pagamento Realizado</div>
+                        </div>
+                        <div class="stepper-item {% if pedido.status == 'A caminho' or pedido.status == 'Entregue' %}completed{% endif %}">
+                            <div class="step-counter"><i class="fas fa-truck"></i></div>
+                            <div class="step-name">Saiu para Entrega</div>
+                        </div>
+                        <div class="stepper-item {% if pedido.status == 'Entregue' %}completed{% endif %}">
+                            <div class="step-counter"><i class="fas fa-box-open"></i></div>
+                            <div class="step-name">Pedido Entregue</div>
+                        </div>
+                    </div>
                 </div>
             {% endfor %}
         {% else %}
